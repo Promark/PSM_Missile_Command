@@ -1,3 +1,11 @@
+//This was written intial by Joshua L Skelton as part of research with Dr jon Preston
+//It is a client for Sony devices as part of a Missile Command game to be developed
+//within the Playstaion Mobile Suite and initially used on Vitas and Sony Tablets
+//Date: 1/16/2013
+//jskelto2@spsu.edu
+
+
+
 using System;
 using System.Collections.Generic;
 using Sce.PlayStation.Core.Imaging;

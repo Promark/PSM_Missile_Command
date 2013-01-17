@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Research_Game\AppMain.cs">
     <Files>
-      <File FileName="Research_Game\AppMain.cs" Line="78" Column="12" />
+      <File FileName="Research_Game\AppMain.cs" Line="5" Column="20" />
       <File FileName="Research_Game\Hits.cs" Line="28" Column="13" />
       <File FileName="Research_Game\SimpleSprite.cs" Line="21" Column="23" />
     </Files>
