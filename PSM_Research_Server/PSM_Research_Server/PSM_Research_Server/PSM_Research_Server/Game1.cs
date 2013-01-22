@@ -23,6 +23,7 @@ namespace PSM_Research_Server
     /// network games using these divices, and using differetn platforms.
     /// This research started as a Honors research project @ SPSU w/ Dr Jon Preston Overseeing the project.
     /// researcher/coder: Joshua L Skelton
+    /// // 12345
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
@@ -62,7 +63,7 @@ namespace PSM_Research_Server
             connections = new List<Connection_Work>();
             try
             {
-                IPAddress ipAd = IPAddress.Parse("192.168.1.115");
+                IPAddress ipAd = IPAddress.Parse("192.168.1.115");//IP address of home machine
                 listener = new TcpListener(ipAd, 8001);
 
                 listener.Start();
@@ -74,8 +75,8 @@ namespace PSM_Research_Server
                 sr = new StreamReader(ns);
                 //client_ID = sr.ReadLine();
                 //this gets latest state of the move client, includes positions of gems, osition of handle, etc
-                moveClient = new PSMoveClientThreadedRead();
-                moveClient.Connect("192.168.1.66", 7899);
+                moveClient = new PSMoveClientThreadedRead();// IP address of Move.Me server
+                moveClient.Connect("192.168.1.101", 7899);
                 moveClient.StartThread();
             }
             catch
