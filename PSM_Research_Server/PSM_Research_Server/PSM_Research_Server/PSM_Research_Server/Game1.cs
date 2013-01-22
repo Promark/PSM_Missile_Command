@@ -24,6 +24,7 @@ namespace PSM_Research_Server
     /// This research started as a Honors research project @ SPSU w/ Dr Jon Preston Overseeing the project.
     /// researcher/coder: Joshua L Skelton
     /// // 12345
+    /// ------------------
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
