@@ -374,14 +374,14 @@ namespace Research_Game
 				}
 			}
 			
-			/*for (int i = dots.Count - 1; i >= 0; i--)
+			for (int i = dots.Count - 1; i >= 0; i--)
             {
                 SimpleSprite o = dots[i];
                 if (!o.isAlive)
                 {
                     dots.Remove(o);
                 }
-            }*/
+            }
 			
 		}
 
