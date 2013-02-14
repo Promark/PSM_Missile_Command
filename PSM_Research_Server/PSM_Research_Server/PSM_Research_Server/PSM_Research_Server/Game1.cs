@@ -64,20 +64,20 @@ namespace PSM_Research_Server
             connections = new List<Connection_Work>();
             try
             {
-                IPAddress ipAd = IPAddress.Parse("192.168.1.100");//IP address of home machine
+                IPAddress ipAd = IPAddress.Parse("192.168.1.115");//IP address of home machine
                 listener = new TcpListener(ipAd, 8001);
 
                 listener.Start();
 
                 tcpclnt = new TcpClient();
-                tcpclnt.Connect("192.168.1.100", 8001);
+                tcpclnt.Connect("192.168.1.115", 8001);
                 ns = tcpclnt.GetStream();
                 sw = new StreamWriter(ns);
                 sr = new StreamReader(ns);
                 //client_ID = sr.ReadLine();
                 //this gets latest state of the move client, includes positions of gems, osition of handle, etc
-                moveClient = new PSMoveClientThreadedRead();
-                moveClient.Connect("192.168.1.102", 7899);// IP address of Move.Me server
+                moveClient = new PSMoveClientThreadedRead();// IP address of Move.Me server
+                moveClient.Connect("192.168.1.101", 7899);
                 moveClient.StartThread();
             }
             catch
@@ -153,28 +153,8 @@ namespace PSM_Research_Server
             }
 
             // doing this makes the curser move on the screen like a "laser pointer"
-
-             crosshair_pos.X += (int)state.gemStates[0].vel.x / 10;
+            crosshair_pos.X += (int)state.gemStates[0].vel.x / 10;
             crosshair_pos.Y -= (int)state.gemStates[0].vel.y / 10;
-
-            if (crosshair_pos.X > GraphicsDeviceManager.DefaultBackBufferWidth - crosshairs.Width / 2)
-            {
-                crosshair_pos.X = (GraphicsDeviceManager.DefaultBackBufferWidth - crosshairs.Width / 2);
-            }
-            else if (crosshair_pos.X < -1 * (crosshairs.Width / 2))
-            {
-                crosshair_pos.X = 0 - crosshairs.Width / 2;
-            }
-
-            if (crosshair_pos.Y > GraphicsDeviceManager.DefaultBackBufferHeight - crosshairs.Height / 2)
-            {
-                crosshair_pos.Y = GraphicsDeviceManager.DefaultBackBufferHeight - crosshairs.Height / 2;
-            }
-            else if (crosshair_pos.Y < -1 * (crosshairs.Height / 2))
-            {
-                crosshair_pos.Y = 0 - crosshairs.Height / 2;
-            }
-           
 
             // this coverts these cartesian coordinates to screen coordinates
             X = ((GraphicsDevice.Viewport.Width / 2) + (int)(crosshair_pos.X - 0)) * 1;
