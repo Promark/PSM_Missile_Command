@@ -1,0 +1,35 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Research_Game\Scenes\GameScene.cs">
+    <Files>
+      <File FileName="Research_Game\Scenes\GameScene.cs" Line="446" Column="20" />
+      <File FileName="Research_Game\Explosion.cs" Line="20" Column="16" />
+      <File FileName="Research_Game\AppMain.cs" Line="10" Column="41" />
+      <File FileName="Research_Game\Scenes\MenuScene.cs" Line="41" Column="49" />
+      <File FileName="Research_Game\Support.cs" Line="36" Column="1" />
+      <File FileName="Research_Game\SimpleSprite.cs" Line="82" Column="17" />
+      <File FileName="Research_Game\Sprite.cs" Line="1" Column="1" />
+      <File FileName="Research_Game\Scenes\LoseScene.cs" Line="1" Column="1" />
+      <File FileName="Research_Game\Scenes\WinningScene.cs" Line="74" Column="55" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Research_Game" expanded="True">
+            <Node name="resources" expanded="True" />
+            <Node name="Scenes" expanded="True">
+              <Node name="GameScene.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Research_Game\Scenes\MenuScene.cs" line="74" offsetX="381" offsetY="1241" expression="Sce.PlayStation.HighLevel.UI.UISystem" liveUpdate="False" />
+    <Watch file="Research_Game\Scenes\OptionScene.cs" line="205" offsetX="317" offsetY="3468" expression="Sce.PlayStation.HighLevel.UI.UISystem" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0049D20-4756-4965-8A3D-690A4C55ED47}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Research_Game</RootNamespace>
+    <AssemblyName>Research_Game</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.GameEngine2D" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="SimpleSprite.cs" />
+    <Compile Include="Hits.cs" />
+    <Compile Include="Scenes\HighScoreScene.cs" />
+    <Compile Include="Scenes\WinningScene.cs" />
+    <Compile Include="Scenes\OptionScene.cs" />
+    <Compile Include="Scenes\OpeningScene.cs" />
+    <Compile Include="Scenes\LoseScene.cs" />
+    <Compile Include="Scenes\CreditScene.cs" />
+    <Compile Include="Scenes\GameScene.cs" />
+    <Compile Include="Scenes\MenuScene.cs" />
+    <Compile Include="Support.cs" />
+    <Compile Include="Explosion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+    <Folder Include="shaders\" />
+    <Folder Include="Scenes\" />
+    <Folder Include="resources\soundNmusic\" />
+    <Folder Include="resources\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\dot.png" />
+    <Content Include="resources\dot_1.png" />
+    <Content Include="resources\NYC.png" />
+    <Content Include="resources\LA.png" />
+    <Content Include="resources\Atlanta.png" />
+    <Content Include="resources\Paris.png" />
+    <Content Include="resources\fire_particle.png" />
+    <Content Include="resources\Paris_01_hit.png" />
+    <Content Include="resources\Paris_02_hit.png" />
+    <Content Include="resources\Paris_03_hit.png" />
+    <Content Include="resources\Paris_04_hit.png" />
+    <Content Include="resources\soundNmusic\ButtonClick.wav" />
+    <Content Include="resources\fonts\MedievalSharp.ttf" />
+    <Content Include="resources\GraySmoke.png" />
+    <Content Include="resources\red-rectangle.jpg" />
+    <Content Include="resources\shield-grey.png" />
+    <Content Include="resources\win.png" />
+    <Content Include="resources\openningScene.jpg" />
+    <Content Include="resources\menuScene.png" />
+    <Content Include="resources\soundNmusic\game_game_music.mp3" />
+    <Content Include="resources\soundNmusic\explosionMissile.wav" />
+    <Content Include="resources\Bomb_mini.png" />
+    <Content Include="resources\Bomb_mini_left.png" />
+    <Content Include="resources\Bomb_mini_right.png" />
+    <Content Include="resources\lose.png" />
+    <Content Include="resources\Credits.png" />
+    <Content Include="resources\Atlanta_01.png" />
+    <Content Include="resources\Atlanta_02.png" />
+    <Content Include="resources\Atlanta_03.png" />
+    <Content Include="resources\Atlanta_04.png" />
+    <Content Include="resources\LA_01.png" />
+    <Content Include="resources\LA_02.png" />
+    <Content Include="resources\LA_03.png" />
+    <Content Include="resources\LA_04.png" />
+    <Content Include="resources\NYC_01.png" />
+    <Content Include="resources\NYC_02.png" />
+    <Content Include="resources\NYC_03.png" />
+    <Content Include="resources\NYC_04.png" />
+    <Content Include="resources\Paris_01.png" />
+    <Content Include="resources\Paris_02.png" />
+    <Content Include="resources\Paris_03.png" />
+    <Content Include="resources\Paris_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Sprite.fcg" />
+    <ShaderProgram Include="shaders\Sprite.vcg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+</Project>
